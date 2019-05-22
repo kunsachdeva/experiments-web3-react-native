@@ -3,6 +3,8 @@ package com.web3withreactnative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.peel.react.TcpSocketsModule;
+import com.rnfs.RNFSPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -24,6 +26,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new TcpSocketsModule(),
+            new RNFSPackage(),
             new RandomBytesPackage()
       );
     }
