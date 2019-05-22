@@ -22,3 +22,9 @@ if (typeof atob === 'undefined') {
     return new Buffer(b64Encoded, 'base64').toString('binary');
   };
 }
+
+global.__dirname = './'
+
+global.self = global
+
+global.expect = require("expect");
